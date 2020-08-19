@@ -22,6 +22,9 @@ RUN set -x && \
     chmod go+rwX -R $ACTIVEMQ_HOME && \
     chmod +x /docker-entrypoint.sh
 
+
+COPY activemq.xml /opt/apache-activemq-5.15.2/conf/activemq.xml
+
 WORKDIR $ACTIVEMQ_HOME
 
 EXPOSE 61616
